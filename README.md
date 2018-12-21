@@ -1,4 +1,4 @@
-#ANZ Toy Robot
+#Toy Robot
 
 A simulator program for Robot.
 
