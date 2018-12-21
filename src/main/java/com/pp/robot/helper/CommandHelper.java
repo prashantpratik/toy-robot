@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 public class CommandHelper {
     private static final String DELIMITER = ",";
+    private static final String SPACE = " ";
 
     public static Position getPosition(Robot robot) {
         switch (robot.getCoordinate().getDirection()) {
@@ -31,7 +32,7 @@ public class CommandHelper {
         List<Command> commandList = new ArrayList<>();
         commandListString.forEach(command -> {
             System.out.println("Processing command: " + command);
-                    List<String> tokenList = Pattern.compile(" ")
+                    List<String> tokenList = Pattern.compile(SPACE)
                             .splitAsStream(command)
                             .collect(Collectors.toList());
                     Command newCommand = new Command(tokenList.get(0));

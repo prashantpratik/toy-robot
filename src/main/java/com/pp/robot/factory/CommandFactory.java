@@ -95,6 +95,13 @@ public class CommandFactory {
             robot.getCoordinate().setPosition(nextPosition);
     }
 
+    /**
+     *
+     * @param robot
+     * @param tableTop
+     * @param command
+     * @throws RobotException
+     */
     private static void executePlaceCommand(Robot robot, TableTop tableTop, Command command) throws RobotException {
         Position newPosition = new Position(Integer.parseInt(command.getParams().get(0)), Integer.parseInt(command.getParams().get(1)));
         if (tableTop.isValidPosition(newPosition)) {
